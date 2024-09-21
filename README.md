@@ -37,6 +37,12 @@ K-Nearest Neighbors (KNN)
 
 
 # Next Steps/ Cost effect of misclassification on AI Models
+I will try to play with few other methods for fixing Imbalance datasets such as Bagging,Boosting etc
+Deploy this in Azure Pipeline in Azure data platform ?
+Use the same method for traning Image classification (Neural Network based training) and see if it provides good performance metrics
+ML oversampling methods such as SMOTE won't probably work with Neural Network so  An alternative to SMOTE is to obtain synthetic points using generative models such as Variational AutoEncoders. Generative models have demonstrated enormous potential when handling complex data distributions during the last few years. Their success at generating realistic data makes them a new paradigm to solve dataset oversampling.
+The long tail problem in image classification refers to the imbalance in data distribution where a few classes have many samples, while most classes have few samples. This is a common issue in real-world image recognition problems, such as medical imaging
+
 
 
 
