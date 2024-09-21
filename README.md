@@ -29,11 +29,7 @@ Naive Bayes
 K-Nearest Neighbors (KNN)
 # How I worked on this project
 1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc
-2. There is 3 ways to get cost of mis classification. 
-
-Domain Expert provides the cost(Not needed for this course)
-Balance Ratio (code is in notebook)
-Cross-validation: find cost as hyper-parameter (code is in notebook)
+2. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
 3. Tried to use this cost sensitive model into different algorithms for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve ROC/AUC,Preision/Recall etc metrics of ML Models
 4. Worked on another approach with Meta Label
 
