@@ -38,7 +38,36 @@ K-Nearest Neighbors (KNN)
 # How I worked on this project
 1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc
 2. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
-3. Tried to use this cost sensitive model into different ML algorithms(linear Regression, Random Forest, XGBOOST) for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC/AUC,Preision/Recall etc  of those different ML Models
+3. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
+
+Defining the class_weight parameter for those estimators that allow it, when we set the estimator
+Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
+With both the class_weight parameter or the sample_weight vector, we indicate that the loss function should be modified to accommodate the class imbalance and the cost attributed to each misclassification.
+
+parameters
+class_weight: can take 'balanced' as argument, in which case it will use the balance ratio as weight. Alternatively, it can take a dictionary with {class: penalty}, pairs. In this case, it penalizes mistakes in samples of class[i] with penalty[i].
+
+So if class_weight = {0:1, and 1:10}, misclassification of observations of class 1 are penalized 10 times more than misclassification of observations of class 0.
+
+sample_weight is a vector of the same length as y, containing the weight or penalty for each individual observation. In principle, it is more flexible, because it allows us to set weights to the observations and not to the class as a whole. So in this case, for example we could set up higher penalties for fraudulent applications that are more costly (money-wise) than to those fraudulent applications that are of little money.
+Estimating the Cost with Cross-Validation
+
+We mentioned that there are 3 ways of estimating the cost:
+
+Domain Expert provides the cost
+Balance Ratio (we did this in previous notebook)
+Cross-validation: find cost as hyper-parameter
+In this notebook, we will find the cost with hyper parameter search and cross-validation.
+Credit risk
+Machine Learning with Imbalanced Data - Course
+
+In this notebook, we'll create 3 models to assess credit risk by using:
+
+Logistic regression
+Random forests
+XGBoost
+And we'll compare their performance after applying cost-sensitive learning.
+4. Tried to use this cost sensitive model into different ML algorithms(linear Regression, Random Forest, XGBOOST) for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC/AUC,Preision/Recall etc  of those different ML Models
 4.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
 5. Worked on another approach with Meta Label
 
