@@ -10,4 +10,4 @@
 5. My next goal is to test this model with some new cases beyong credit risk analysis, build MLOPS pipeline in Azure data environment and then see how it works on GEN AI(Not sure if it can be deployed from normal PC without much GPU support)
 ```
 
-#Mot
+#😇 Motivation
