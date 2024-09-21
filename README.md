@@ -35,3 +35,9 @@ K-Nearest Neighbors (KNN)
 
 
 
+
+# Next Steps/ Cost effect of misclassification on AI Models
+
+
+
+
