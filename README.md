@@ -3,27 +3,11 @@
 
 #**😇** **Motivation**
 
-Over the years, my go-to techniques when dealing with imbalanced classes have been:
-
-oversampling the under-represented class: I used to think that this method would always yield overfitting but that's not the case. This paper that I discovered thanks to fastai courses changed my mind with respect to oversampling. The paper compares different methods of dealing with imbalanced data in the context of CNN. Here are the conclusions of the paper
-
-
-:boom: You don't need to do that anymore! :smile: Here's how easy it is:
-
-```js
-import customFonts from 'custom-fonts-in-emails';
-import path from 'path';
-
-const options = {
-  text: 'Make something people want',
-  fontNameOrPath: 'GoudyBookletter1911',
-  fontColor: 'white',
-  backgroundColor: '#ff6600',
-  fontSize: 40
-};
-
-customFonts.png2x(options)
-  .then(console.log)
-  .catch(console.error);
+1. I dealt with various ML modeling dorectly and indirectly in my current and previous roles. Imbalanced data has always been an issue for ML model training.You might think you got good, historical traning data bbut removing bias was always an issue. I knew 1-2 approaches on how to solve this but I wanted to know modern approaches, what is true cost/penalty for  selecting bad imbalanced dataset.
+2. My current role deals with data pipeline,observability,tennacy, reliability of data infrastructure and AIOPs is becoming more nad more prominent in those areas. ML and AL has its differences but the core algorithms and basic steps of deployment are same. The MLOPS cycle is
+3. This is why I wanted to understand how to take care of this issue and what is the impact of not solving this. This is why I wanted to do a small project on ML.
+4. Moreover I wanted to know the mathametical equation behind solving imbalanced data, the effect on various algorithms,ensembled learning and hyperparameter tuning which I was out of touch for a while
+5. My next goal is to test this model with some new cases beyong credit risk analysis, build MLOPS pipeline in Azure data environment and then see how it works on GEN AI(Not sure if it can be deployed from normal PC without much GPU support)
 ```
 
+#Mot
