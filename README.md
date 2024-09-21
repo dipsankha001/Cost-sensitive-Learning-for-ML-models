@@ -14,14 +14,21 @@
 
 
 # What is this Project About
-1. This is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
-2. This project is based on an udemy course of Data Scientist and owner of Soledid Galli. She is a great teacher,contributor,instructor who is able to break down complex ML issues from scratch.She starts with  and then describes and concludes with
-3. However since I was interested on just the cost sensitive ML training, i focused on that part and this github project is based on cost sensitive ML training part only
-4. In this project  I will use historical data set of Bank to predict whether a user they will default or not
-5. Imbalanced classification refers to a classification predictive modeling problem where the number of examples in the training dataset for each class label is not balanced.
-6. Example : for my project if the vast majority of the users  become marked in the "Not-default” class then it is imbalanced dataset issue
-7. Imbalanced datasets are those where there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
-8. Some of the top-ranked machine learning algorithms for Classification are:
+1. This project is based on an udemy course of Data Scientist and owner of Soledid Galli. She is a great teacher,contributor,instructor who is able to break down complex ML issues from scratch.She described various approaches for dealing with Imbalanced data set , how to choose and interpret performance metrics and how to train different ML models with each of those approaches.However since I was interested on just the cost sensitive ML training, i focused on that part and this github project is based on cost sensitive ML training part only
+2. This is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
+3. Imbalance dataset is a dataset where one category is disproportionately more present than the other .The results for using an imbalance dataset in an ML model could be disastrous. For example, in a credit risk model, the algorithm might incorrectly predict a "low-risk loan" when it’s actually “high risk”. Similarly, a medical model might diagnose a diabetic patient as “healthy” when they are, in fact, diabetic.
+This is why cost sensitive model training for linear regression or other classification modelling is important. The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.There are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
+![image](https://github.com/user-attachments/assets/6106f97d-2c84-4a5d-b82d-3cfca3aea071)
+
+
+5. The cost of a misclassification error is conditional on the circumstances.Cost depends on the nature of the case / observation
+6. But how do you calculate that cost ? there are two approaches to that
+7. ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
+  
+8. In this project  I will use historical data set of Bank to understand credit default risk
+
+9. Imbalanced datasets are those where there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
+10. Some of the top-ranked machine learning algorithms for Classification are:
 Logistic Regression
 Decision Tree
 Random Forest
