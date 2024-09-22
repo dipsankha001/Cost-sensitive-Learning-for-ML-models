@@ -77,12 +77,12 @@ Estimating the Cost with Cross-Validation.
 
 <br> 4. In this notebook, we'll create 3 models to assess credit risk by using:
 <br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
-5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
-6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
+<br>5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
+<br>6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
 <br> And we'll compare their performance after applying cost-sensitive learning.
-5.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+<br>5.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
-7.we'll pass class_weight as parameter into ML models
+<br>7.we'll pass class_weight as parameter into ML models
 <br>8. Worked on another approach with Meta Label
 
 
