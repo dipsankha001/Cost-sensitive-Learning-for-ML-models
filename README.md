@@ -81,21 +81,21 @@ Estimating the Cost with Cross-Validation.
 <br>5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
 <br>6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
 <br> And we'll compare their performance after applying cost-sensitive learning.
-<br>5.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+<br>7.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
-<br>7.we'll pass class_weight as parameter into ML models
-<br>8. Worked on another approach with Meta Label in another notebook
+<br>8.we'll pass class_weight as parameter into ML models
+<br>9. Worked on another approach with Meta Label in another notebook
 
 
 
 # How to interpret Performance Metrics such as ROC-AUC Curve or Precision-Recall Curve
-<br>When making a prediction for a binary or two-class classification problem, there are two types of errors that we could make.
+<br>1.When making a prediction for a binary or two-class classification problem, there are two types of errors that we could make.
 
 <br>False Positive. Predict an event when there was no event.
 <br>False Negative. Predict no event when in fact there was an event.
-<br>ROC Curves summarize the trade-off between the true positive rate and false positive rate for a predictive model using different probability thresholds.
-<br>Precision-Recall curves summarize the trade-off between the true positive rate and the positive predictive value for a predictive model using different probability thresholds.
-<br>ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets
+<br>2.ROC Curves summarize the trade-off between the true positive rate and false positive rate for a predictive model using different probability thresholds.
+<br>3.Precision-Recall curves summarize the trade-off between the true positive rate and the positive predictive value for a predictive model using different probability thresholds.
+<br>4.ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets
 <br> True Positive Rate (Recall) = True Positives / (True Positives + False Negatives)
 
 <br>Positive Predictive Power (Precision) = True Positives / (True Positives + False Positives)
