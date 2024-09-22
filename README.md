@@ -17,16 +17,8 @@
 2. The goal of this project is to understand various approaches for solving imbalanced data set, what is cost sensitive ML Model traning, what are the different approaches for cost sensitive traning and howcost functionimpacts different ML classification models and how to interpret Model performance metrics.
 3. We use a credit Risk analysis dataset to  tThis is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
 4. 
-9. In this project  I will use historical data set of Bank to understand credit default risk
-
-10. Imbalanced datasets are those where there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
-11. Some of the top-ranked machine learning algorithms for Classification are:
-Logistic Regression
-Decision Tree
-Random Forest
-Support Vector Machine (SVM)
-Naive Bayes
-K-Nearest Neighbors (KNN)
+9. In this project  I will use historical data set of Bank to interpret credit default risk.This is Customer Transaction and Demographic related data , It holds Risky and Not Risky customer for specific banking products. This is an Imbalanced datasets because there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
+10. Linear Regression predicts output for  a given input  but the cost function is used to measure how far the predicted values are from the actual values so the code will show how cost function improves performance metrics of Logistic regression and impact of using cost function on different other ML models(whether it works or not)
 # How I worked on this project
 1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc
 2. Then I have to decide which approach to take to deal with Imbalanced data set. You can solve it at Data level(by Over or under sampling) or you can use ensemble method(tuning traning data set by modifying weak learners) or you can use costfunction method
@@ -36,6 +28,13 @@ For instance, an algorithm can learn to predict whether a given email is spam or
 ![image](https://github.com/user-attachments/assets/b3414560-298f-4e97-b0b3-2aef475f81ed)
 
 Machine learning classification illustration for the email
+ Some of the top-ranked machine learning algorithms for Classification are:
+Logistic Regression
+Decision Tree
+Random Forest
+Support Vector Machine (SVM)
+Naive Bayes
+K-Nearest Neighbors (KNN)
 4. Imbalance dataset is a dataset where one category is disproportionately more present than the other .The results for using an imbalance dataset in an ML model could be disastrous. For example, in a credit risk model, the algorithm might incorrectly predict a "low-risk loan" when it’s actually “high risk”. Similarly, a medical model might diagnose a diabetic patient as “healthy” when they are, in fact, diabetic.
 5. 
 This is why cost sensitive model training for linear regression or other classification modelling is important. here are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
