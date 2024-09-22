@@ -50,9 +50,11 @@ There are multiple approaches to solve this issue. In this project I will focus 
 11. But how do you calculate that cost ? there are two approaches to that
 ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
   
-# Logic behind each Python Code and what is Logit function in Linear Regression
- There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
-5. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
+# Logic behind each Python Code and how imbalanced data is fixed in Linear Regression or other ML Models
+ 1. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
+
+  
+2. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
 
 Defining the class_weight parameter for those estimators that allow it, when we set the estimator
 Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
@@ -64,25 +66,33 @@ class_weight: can take 'balanced' as argument, in which case it will use the bal
 So if class_weight = {0:1, and 1:10}, misclassification of observations of class 1 are penalized 10 times more than misclassification of observations of class 0.
 
 sample_weight is a vector of the same length as y, containing the weight or penalty for each individual observation. In principle, it is more flexible, because it allows us to set weights to the observations and not to the class as a whole. So in this case, for example we could set up higher penalties for fraudulent applications that are more costly (money-wise) than to those fraudulent applications that are of little money.
-Estimating the Cost with Cross-Validation
+Estimating the Cost with Cross-Validation.
 
-We mentioned that there are 3 ways of estimating the cost:
+
+3. We mentioned that there are 3 ways of estimating the cost:
 
 Domain Expert provides the cost
 Balance Ratio (we did this in previous notebook)
 Cross-validation: find cost as hyper-parameter
 In this notebook, we will find the cost with hyper parameter search and cross-validation.
-Credit risk
-Machine Learning with Imbalanced Data - Course
+Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-In this notebook, we'll create 3 models to assess credit risk by using:
+4. In this notebook, we'll create 3 models to assess credit risk by using:
 
 Logistic regression
 Random forests
 XGBoost
 And we'll compare their performance after applying cost-sensitive learning.
-4. Tried to use this cost sensitive model into different ML algorithms(linear Regression, Random Forest, XGBOOST) for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC/AUC,Preision/Recall etc  of those different ML Models
-4.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
+5.We'll carry out different feature engineering steps for logistic regression and tree based models.
+
+For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+
+For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
+5.we'll pass class_weight as parameter into ML models
+6.The logistic regression cost function, also known as the log loss or cross-entropy loss, is a measure of the error between the predicted probabilities and true class labels.
+7. Tried to use this cost sensitive model into different ML algorithms(linear Regression, Random Forest, XGBOOST) for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
+8.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
+9.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
 5. Worked on another approach with Meta Label
 
 
