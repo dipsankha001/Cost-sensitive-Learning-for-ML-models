@@ -88,6 +88,28 @@ Estimating the Cost with Cross-Validation.
 
 
 
+# How to interpret Performance Metrics such as ROC-AUC Curve or Precision-Recall Curve
+<br>When making a prediction for a binary or two-class classification problem, there are two types of errors that we could make.
+
+<br>False Positive. Predict an event when there was no event.
+<br>False Negative. Predict no event when in fact there was an event.
+<br>ROC Curves summarize the trade-off between the true positive rate and false positive rate for a predictive model using different probability thresholds.
+<br>Precision-Recall curves summarize the trade-off between the true positive rate and the positive predictive value for a predictive model using different probability thresholds.
+<br>ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets
+<br> True Positive Rate (Recall) = True Positives / (True Positives + False Negatives)
+
+<br>Positive Predictive Power (Precision) = True Positives / (True Positives + False Positives)
+
+![image](https://github.com/user-attachments/assets/8fc7c1e5-0bdf-4437-a18b-79e0cdbb6a68)
+# How to interpret Formula behind Linear Regression with Cost function vs normal Linear Regression Function
+![image](https://github.com/user-attachments/assets/af9f7e41-a43e-4327-bbda-4c6a7874ec61)
+![image](https://github.com/user-attachments/assets/87efb72b-54a0-4e84-b9ca-6414a5de0031)
+![image](https://github.com/user-attachments/assets/fd471460-ce8d-43fc-8e8d-2d63ebade677)
+![image](https://github.com/user-attachments/assets/65a6ed27-68f4-47c7-9f64-7bbb08817d32)
+
+
+
+
 
 # Next Steps/ Cost effect of misclassification on AI Models
 I will try to play with few other methods for fixing Imbalance datasets such as Bagging,Boosting etc
