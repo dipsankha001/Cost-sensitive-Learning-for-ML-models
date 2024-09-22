@@ -15,8 +15,8 @@
 # What is this Project About
 1. This project is based on an udemy course of Data Scientist Soledad Galli(https://www.udemy.com/course/machine-learning-with-imbalanced-data/learn/lecture/22733079#overview
 ). She is a great teacher,Open source contributor,instructor who is able to break down complex ML issues from scratch.She described various approaches for dealing with Imbalanced data set , how to choose and interpret performance metrics and how to train different ML models with each of those approaches.However since I was interested on just the cost sensitive ML training, I focused on the cost sensitive ML model approach and this github project is based on cost sensitive ML training part only
-2. The goal of this project is to understand various approaches for solving imbalanced data set, what is cost sensitive ML Model traning, what are the different approaches for cost sensitive traning and howcost functionimpacts different ML classification models and how to interpret Model performance metrics.
-3. We use a credit Risk analysis dataset to  tThis is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
+2. The goal of this project is to understand various approaches for solving imbalanced data set, what is cost sensitive ML Model traning, what are the different approaches for cost sensitive traning and how cost function impacts different ML classification models and how to interpret Model performance metrics.
+3. We use a credit Risk analysis dataset to check the viability of cost function. This is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
 4. In this project  I will use historical data set of Bank to interpret credit default risk.This is Customer Transaction and Demographic related data , It holds Risky and Not Risky customer for specific banking products. This is an Imbalanced datasets because there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
 5. Linear Regression predicts output for  a given input  but the cost function is used to measure how far the predicted values are from the actual values so the code will show how cost function improves performance metrics of Logistic regression and impact of using cost function on different other ML models(whether it works or not)
 # How I worked on this project
@@ -27,15 +27,15 @@
 5. For instance, an algorithm can learn to predict whether a given email is spam or no spam, as illustrated below. 
 ![image](https://github.com/user-attachments/assets/b3414560-298f-4e97-b0b3-2aef475f81ed)
 
-Machine learning classification illustration for the email
- Some of the top-ranked machine learning algorithms for Classification are:
-Logistic Regression
-Decision Tree
-Random Forest
-Support Vector Machine (SVM)
-Naive Bayes
-K-Nearest Neighbors (KNN)
-We tried only Logistic Regression, Random Forest and XGBoost for this project
+<br> Machine learning classification illustration for the email
+ <br>Some of the top-ranked machine learning algorithms for Classification are:
+<br>Logistic Regression
+<br>Decision Tree
+<br>Random Forest
+<br>Support Vector Machine (SVM)
+<br>Naive Bayes
+<br>K-Nearest Neighbors (KNN)
+<br>We tried only Logistic Regression, Random Forest and XGBoost for this project
 
 6. A key component of machine learning classification tasks is handling unbalanced data, which is characterized by a skewed class distribution with a considerable overrepresentation of one class over the others.This is why fixing imbalanced dataset for linear regression or other classification modelling is important
 
