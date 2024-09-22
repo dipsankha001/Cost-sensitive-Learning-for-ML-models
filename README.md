@@ -16,16 +16,7 @@
 1. This project is based on an udemy course of Data Scientist Soledid Galli. She is a great teacher,Open source contributor,instructor who is able to break down complex ML issues from scratch.She described various approaches for dealing with Imbalanced data set , how to choose and interpret performance metrics and how to train different ML models with each of those approaches.However since I was interested on just the cost sensitive ML training, I focused on the cost sensitive ML model approach and this github project is based on cost sensitive ML training part only
 2. The goal of this project is to understand various approaches for solving imbalanced data set, what is cost sensitive ML Model traning, what are the different approaches for cost sensitive traning and howcost functionimpacts different ML classification models and how to interpret Model performance metrics.
 3. We use a credit Risk analysis dataset to  tThis is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
-4. Imbalance dataset is a dataset where one category is disproportionately more present than the other .The results for using an imbalance dataset in an ML model could be disastrous. For example, in a credit risk model, the algorithm might incorrectly predict a "low-risk loan" when it’s actually “high risk”. Similarly, a medical model might diagnose a diabetic patient as “healthy” when they are, in fact, diabetic.
-This is why cost sensitive model training for linear regression or other classification modelling is important. The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.There are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
-![image](https://github.com/user-attachments/assets/6106f97d-2c84-4a5d-b82d-3cfca3aea071)
-5. Cost-sensitive learning is a subfield of machine learning that takes the costs of prediction errors (and potentially other costs) into account when training a machine learning model. It is a field of study that is closely related to the field of imbalanced learning that is concerned with classification on datasets with a skewed class distribution. As such, many conceptualizations and techniques developed and used for cost-sensitive learning can be adopted for imbalanced classification problems
-
-
-6. The cost of a misclassification error is conditional on the circumstances.Cost depends on the nature of the case / observation
-7. But how do you calculate that cost ? there are two approaches to that
-8. ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
-  
+4. 
 9. In this project  I will use historical data set of Bank to understand credit default risk
 
 10. Imbalanced datasets are those where there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
@@ -38,8 +29,24 @@ Naive Bayes
 K-Nearest Neighbors (KNN)
 # How I worked on this project
 1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc
-2. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
-3. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
+2. Then I have to decide which approach to take to deal with Imbalanced data set. You can solve it at Data level(by Over or under sampling) or you can use ensemble method(tuning traning data set by modifying weak learners) or you can use costfunction method
+3. Classification is a supervised machine learning method where the model tries to predict the correct label of a given input data. In classification, the model is fully trained using the training data, and then it is evaluated on test data before being used to perform prediction on new unseen data.
+
+For instance, an algorithm can learn to predict whether a given email is spam or no spam, as illustrated below. 
+![image](https://github.com/user-attachments/assets/b3414560-298f-4e97-b0b3-2aef475f81ed)
+
+Machine learning classification illustration for the email
+4. Imbalance dataset is a dataset where one category is disproportionately more present than the other .The results for using an imbalance dataset in an ML model could be disastrous. For example, in a credit risk model, the algorithm might incorrectly predict a "low-risk loan" when it’s actually “high risk”. Similarly, a medical model might diagnose a diabetic patient as “healthy” when they are, in fact, diabetic.
+5. 
+This is why cost sensitive model training for linear regression or other classification modelling is important. here are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
+![image](https://github.com/user-attachments/assets/6106f97d-2c84-4a5d-b82d-3cfca3aea071)
+Cost-sensitive learning is a subfield of machine learning that takes the costs of prediction errors (and potentially other costs) into account when training a machine learning model. It is a field of study that is closely related to the field of imbalanced learning that is concerned with classification on datasets with a skewed class distribution. As such, many conceptualizations and techniques developed and used for cost-sensitive learning can be adopted for imbalanced classification problemsThe cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.T
+6. The cost of a misclassification error is conditional on the circumstances.Cost depends on the nature of the case / observation
+8. But how do you calculate that cost ? there are two approaches to that
+9. ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
+  
+4. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
+5. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
 
 Defining the class_weight parameter for those estimators that allow it, when we set the estimator
 Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
