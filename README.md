@@ -70,30 +70,20 @@ Estimating the Cost with Cross-Validation.
 
 
 3. We mentioned that there are 3 ways of estimating the cost:
-
 <br> Domain Expert provides the cost
-/br Balance Ratio (we did this in previous notebook)
-/n Cross-validation: find cost as hyper-parameter
-/n In this notebook, we will find the cost with hyper parameter search and cross-validation.
-Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
+<br>  Balance Ratio (we did this in previous notebook)
+<br>  Cross-validation: find cost as hyper-parameter
+<br> In this notebook, we will find the cost with hyper parameter search and cross-validation.Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-4. In this notebook, we'll create 3 models to assess credit risk by using:
-
-Logistic regression
-Random forests
-XGBoost
-And we'll compare their performance after applying cost-sensitive learning.
-5.We'll carry out different feature engineering steps for logistic regression and tree based models.
-
-For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
-
-For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
-5.we'll pass class_weight as parameter into ML models
-6.The logistic regression cost function, also known as the log loss or cross-entropy loss, is a measure of the error between the predicted probabilities and true class labels.
-7. Tried to use this cost sensitive model into different ML algorithms(linear Regression, Random Forest, XGBOOST) for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
-8.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
-9.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
-5. Worked on another approach with Meta Label
+<br> 4. In this notebook, we'll create 3 models to assess credit risk by using:
+<br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
+5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
+6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
+<br> And we'll compare their performance after applying cost-sensitive learning.
+5.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+<br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
+7.we'll pass class_weight as parameter into ML models
+<br>8. Worked on another approach with Meta Label
 
 
 
