@@ -35,13 +35,19 @@ Support Vector Machine (SVM)
 Naive Bayes
 K-Nearest Neighbors (KNN)
 We tried only Logistic Regression, Random Forest and XGBoost for this project
+
 6. A key component of machine learning classification tasks is handling unbalanced data, which is characterized by a skewed class distribution with a considerable overrepresentation of one class over the others.This is why fixing imbalanced dataset for linear regression or other classification modelling is important
+
+  
 7. Then I have to decide which approach to take to deal with Imbalanced data set. You can solve it at Data level(Changing Data distribution by Over or under sampling or generating synthetic data or removing noise from data ) or you can use ensemble method(Combing sampling technique with tuning traning data set by modifying weak learners/high bias/variance training dataset) or you can use cost-function method(adding a cost/penalty parameter to existing ML algorithm to minimize error/bias of prediction thus inimizing chances of misclassifying minority class)
 There are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
 ![image](https://github.com/user-attachments/assets/6106f97d-2c84-4a5d-b82d-3cfca3aea071)
+
 8. Cost-sensitive learning is a subfield of machine learning that takes the costs of prediction errors (and potentially other costs) into account when training a machine learning model. It is a field of study that is closely related to the field of imbalanced learning that is concerned with classification on datasets with a skewed class distribution. As such, many conceptualizations and techniques developed and used for cost-sensitive learning can be adopted for imbalanced classification problemsThe cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.T
 9. The cost of a misclassification error is conditional on the circumstances.Cost depends on the nature of the case / observation
-10. But how do you calculate that cost ? there are two approaches to that
+
+  
+11. But how do you calculate that cost ? there are two approaches to that
 ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
   
 # Logic behind each Python Code and what is Logit function in Linear Regression
