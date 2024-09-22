@@ -20,7 +20,7 @@
 4. In this project  I will use historical data set of Bank to interpret credit default risk.This is Customer Transaction and Demographic related data , It holds Risky and Not Risky customer for specific banking products. This is an Imbalanced datasets because there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
 5. Linear Regression predicts output for  a given input  but the cost function is used to measure how far the predicted values are from the actual values so the code will show how cost function improves performance metrics of Logistic regression and impact of using cost function on different other ML models(whether it works or not)
 # How I worked on this project
-1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc
+1. I started with dataset download from IEEE,Kaggle etc sources followed by intensive data cleaning to remove unwanted features, duplicates, treating null values etc.Refer to python notebook data-preparation-credit-risk
 2. Imbalance dataset is a dataset where one category is disproportionately more present than the other .The results for using an imbalance dataset in an ML model could be disastrous. For example, in a credit risk model, the algorithm might incorrectly predict a "low-risk loan" when it’s actually “high risk”. Similarly, a medical model might diagnose a diabetic patient as “healthy” when they are, in fact, diabetic.
 3. In this project  I will use historical data set of Bank to interpret credit default risk..This is Customer Transaction and Demographic related data , It holds Risky and Not Risky customer for specific banking products. This is an Imbalanced datasets because there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
 4. Credit Default Risk gets predicted by using any type of classification based ML Algorithm.Classification is a supervised machine learning method where the model tries to predict the correct label of a given input data. In classification, the model is fully trained using the training data, and then it is evaluated on test data before being used to perform prediction on new unseen data.
@@ -55,7 +55,7 @@ There are multiple approaches to solve this issue. In this project I will focus 
  1. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
 
   
-2. In notebook,There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
+2. In Python notebook "Cost sensitive learning with Balanced weight class",We explained There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
 
 Defining the class_weight parameter for those estimators that allow it, when we set the estimator
 Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
@@ -70,13 +70,13 @@ sample_weight is a vector of the same length as y, containing the weight or pena
 Estimating the Cost with Cross-Validation.
 
 
-3. We mentioned that there are 3 ways of estimating the cost:
+3.In Python notebook "Training Cost with Cross-Validation",We explained  We mentioned that there are 3 ways of estimating the cost:
 <br> Domain Expert provides the cost
 <br>  Balance Ratio (we did this in previous notebook)
 <br>  Cross-validation: find cost as hyper-parameter
 <br> In this notebook, we will find the cost with hyper parameter search and cross-validation.Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-<br> 4. In this notebook, we'll create 3 models to assess credit risk by using:
+<br> 4. In Python notebook "Credit risk analysis with 3 models",We explained  we'll create 3 models to assess credit risk by using:
 <br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
 <br>5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
 <br>6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
@@ -84,7 +84,7 @@ Estimating the Cost with Cross-Validation.
 <br>5.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
 <br>7.we'll pass class_weight as parameter into ML models
-<br>8. Worked on another approach with Meta Label
+<br>8. Worked on another approach with Meta Label in another notebook
 
 
 
