@@ -71,10 +71,10 @@ Estimating the Cost with Cross-Validation.
 
 3. We mentioned that there are 3 ways of estimating the cost:
 
-Domain Expert provides the cost
-Balance Ratio (we did this in previous notebook)
-Cross-validation: find cost as hyper-parameter
-In this notebook, we will find the cost with hyper parameter search and cross-validation.
+/n Domain Expert provides the cost
+/n Balance Ratio (we did this in previous notebook)
+/n Cross-validation: find cost as hyper-parameter
+/n In this notebook, we will find the cost with hyper parameter search and cross-validation.
 Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
 4. In this notebook, we'll create 3 models to assess credit risk by using:
