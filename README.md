@@ -12,7 +12,7 @@
 1. This project is based on an udemy course of Data Scientist Soledad Galli(https://www.udemy.com/course/machine-learning-with-imbalanced-data/learn/lecture/22733079#overview
 ). She described various approaches for dealing with Imbalanced data set , how to choose and interpret performance metrics and how to train different ML models with each of those approaches.However since I was interested on just the cost sensitive ML training, I focused on the cost sensitive ML model approach and this github project is based on cost sensitive ML training part only
 2. The goal of this project is to understand various approaches for solving imbalanced data set, what is cost sensitive ML Model traning, what are the different approaches for cost sensitive traning and how cost function impacts different ML classification models and how to interpret Model performance metrics.
-3. We use a credit Risk analysis dataset to check the viability of cost function. This is a classification based Project. Classification is a predictive modeling technique which involves predicting a class label for a given observation.An observation from the domain (input) and an associated class label (output).A common example of classification comes with detecting spam emails. To write a program to filter out spam emails, a computer programmer can train a machine learning algorithm with a set of spam-like emails labelled as spam and regular emails labelled as not-spam
+3. We use a credit Risk analysis dataset to check the viability of cost function. This is a classification Algorithm based Project. 
 4. In this project  I will use historical data set of Bank to interpret credit default risk.This is Customer Transaction and Demographic related data , It holds Risky and Not Risky customer for specific banking products. This is an Imbalanced datasets because there is a severe skew in the class distribution, such as 1:100 or 1:1000 examples in the minority class(User will Default) to the majority class(User will not default)
 5. Linear Regression predicts output for  a given input  but the cost function is used to measure how far the predicted values are from the actual values so the code will show how cost function improves performance metrics of Logistic regression and impact of using cost function on different other ML models(whether it works or not)
 # How I worked on this project
@@ -37,9 +37,8 @@ A key component of machine learning classification tasks is handling unbalanced 
 There are multiple approaches to solve this issue. In this project I will focus only on cost sensitive traning part
 ![image](https://github.com/user-attachments/assets/6106f97d-2c84-4a5d-b82d-3cfca3aea071)
 
-6. Cost-sensitive learning is a subfield of machine learning that takes the costs of prediction errors (and potentially other costs) into account when training a machine learning model. It is a field of study that is closely related to the field of imbalanced learning that is concerned with classification on datasets with a skewed class distribution. As such, many conceptualizations and techniques developed and used for cost-sensitive learning can be adopted for imbalanced classification problemsThe cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.T
+6. Cost-sensitive learning is a subfield of machine learning that takes the costs of prediction errors (and potentially other costs) into account when training a machine learning model. It is a field of study that is closely related to the field of imbalanced learning that is concerned with classification on datasets with a skewed class distribution.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
 7. The cost of a misclassification error is conditional on the circumstances.Cost depends on the nature of the case / observation
-
 
 8. But how do you calculate that cost ? there are two approaches to that
 ![image](https://github.com/user-attachments/assets/7a80392d-b40f-40e3-9b4c-ae5f6c2b0f5c)
@@ -60,8 +59,6 @@ class_weight: can take 'balanced' as argument, in which case it will use the bal
 So if class_weight = {0:1, and 1:10}, misclassification of observations of class 1 are penalized 10 times more than misclassification of observations of class 0.
 
 sample_weight is a vector of the same length as y, containing the weight or penalty for each individual observation. In principle, it is more flexible, because it allows us to set weights to the observations and not to the class as a whole. So in this case, for example we could set up higher penalties for fraudulent applications that are more costly (money-wise) than to those fraudulent applications that are of little money.
-Estimating the Cost with Cross-Validation.
-
 
 3.In Python notebook "Training Cost with Cross-Validation",We explained  I mentioned that there are 3 ways of estimating the cost:
 <br> Domain Expert provides the cost
@@ -69,15 +66,13 @@ Estimating the Cost with Cross-Validation.
 <br>  Cross-validation: find cost as hyper-parameter
 <br> In this notebook, we will find the cost with hyper parameter search and cross-validation.Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-<br> 4. In Python notebook "Credit risk analysis with 3 models",We explained  I created 3 models to assess credit risk by using:
-<br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
-<br>5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
-<br>6.Then I analyzed how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
-<br> And I compared their performance after applying cost-sensitive learning.
-<br>7.I carried out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+<br> 4. In Python notebook "Credit risk analysis with 3 models",I explained  I created 3 models to assess credit risk by using:
+<br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Model.I carried out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
-<br>8.I passed class_weight as parameter into ML models
-<br>9. Worked on another approach with Meta Label in another notebook
+<br>I passed class_weight as parameter into ML models
+<br>5.at the end, I analyzed how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
+
+<br>6. Worked on another approach with Meta Label in another notebook
 
 
 
@@ -99,8 +94,6 @@ Estimating the Cost with Cross-Validation.
 ![image](https://github.com/user-attachments/assets/87efb72b-54a0-4e84-b9ca-6414a5de0031)
 ![image](https://github.com/user-attachments/assets/fd471460-ce8d-43fc-8e8d-2d63ebade677)
 ![image](https://github.com/user-attachments/assets/65a6ed27-68f4-47c7-9f64-7bbb08817d32)
-
-
 
 
 
