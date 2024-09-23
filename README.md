@@ -5,7 +5,7 @@
 
 1. I dealt with various ML modeling dorectly and indirectly in my current and previous roles. Imbalanced data has always been an issue for ML model training. In a balanced dataset, the number of Positive and Negative labels is about equal. However, if one label is more common than the other label, then the dataset is imbalanced .You might think you got good, historical traning data but removing bias was always an issue.
 2. I knew 1-2 approaches on how to solve this imbalanced dataset issue but I wanted to know optimal approaches and what is true cost/penalty for  selecting  imbalanced dataset.
-3. My current role deals with data pipeline,observability,tennacy, reliability of data infrastructure and AIOPs is becoming more nad more prominent in those areas. ML and AL has its differences but the core algorithms and basic steps of deployment are same. The MLOPS cycle is(Data collection->Clean->Train/test->validate->feature store reuse->deploy into CI CD pipeline->Monitor->Govern->Reuse/Analyze metrics)
+3. My current role deals with data pipeline,observability,tennacy, reliability of data infrastructure and AIOPs is becoming more and more prominent in those areas. ML and AL has its differences but the core algorithms and basic steps of deployment are same. The MLOPS cycle is(Data collection->Clean->Train/test->validate->feature store reuse->deploy into CI CD pipeline->Monitor->Govern->Reuse/Analyze metrics)
 4. This is why I wanted to understand how to take care of this issue and what is the impact/cost/penalty of not solving this.Moreover I wanted to know the mathametical equation behind solving imbalanced data
 
 # What is this Project About
@@ -47,9 +47,9 @@ There are multiple approaches to solve this issue. In this project I will focus 
  1. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
 
   
-2. In Python notebook "Cost sensitive learning with Balanced weight class",I explained There are 2 ways in which I can introduce cost into the learning function of the algorithm with Scikit-learn:
+2. In Python notebook "Cost sensitive learning with Balanced weight class",I explained There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
 
-Defining the class_weight parameter for those estimators that allow it, when I set the estimator
+Defining the class_weight parameter for those estimators that allow it, when we set the estimator
 Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
 With both the class_weight parameter or the sample_weight vector, we indicate that the loss function should be modified to accommodate the class imbalance and the cost attributed to each misclassification.
 
@@ -60,14 +60,14 @@ So if class_weight = {0:1, and 1:10}, misclassification of observations of class
 
 sample_weight is a vector of the same length as y, containing the weight or penalty for each individual observation. In principle, it is more flexible, because it allows us to set weights to the observations and not to the class as a whole. So in this case, for example we could set up higher penalties for fraudulent applications that are more costly (money-wise) than to those fraudulent applications that are of little money.
 
-3.In Python notebook "Training Cost with Cross-Validation",We explained  I mentioned that there are 3 ways of estimating the cost:
+3.In Python notebook "Training Cost with Cross-Validation",I mentioned that there are 3 ways of estimating the cost:
 <br> Domain Expert provides the cost
 <br>  Balance Ratio (we did this in previous notebook)
 <br>  Cross-validation: find cost as hyper-parameter
 <br> In this notebook, we will find the cost with hyper parameter search and cross-validation.Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-<br> 4. In Python notebook "Credit risk analysis with 3 models",I explained  I created 3 models to assess credit risk by using:
-<br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Model.I carried out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number
+<br> 4. In Python notebook "Credit risk analysis with 3 models",I created 3 models to assess credit risk by using:
+<br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve of those different ML Model. I carried out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
 <br>I passed class_weight as parameter into ML models
 <br>5.at the end, I analyzed how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
@@ -101,8 +101,8 @@ sample_weight is a vector of the same length as y, containing the weight or pena
 I will try to play with few other methods for fixing Imbalance datasets such as Bagging,Boosting etc
 Deploy this in Azure Pipeline in Azure data platform ?
 Use the same method for traning Image classification (Neural Network based training) and see if it provides good performance metrics
-ML oversampling methods such as SMOTE won't probably work with Neural Network so  An alternative to SMOTE is to obtain synthetic points using generative models such as Variational AutoEncoders. Generative models have demonstrated enormous potential when handling complex data distributions during the last few years. Their success at generating realistic data makes them a new paradigm to solve dataset oversampling.
-The long tail problem in image classification refers to the imbalance in data distribution where a few classes have many samples, while most classes have few samples. This is a common issue in real-world image recognition problems, such as medical imaging
+#note 1 : ML oversampling methods such as SMOTE won't probably work with Neural Network so  An alternative to SMOTE is to obtain synthetic points using generative models such as Variational AutoEncoders. 
+#note 2 : The long tail problem in image classification refers to the imbalance in data distribution where a few classes have many samples, while most classes have few samples. This is a common issue in real-world image recognition problems, such as medical imaging
 
 
 
