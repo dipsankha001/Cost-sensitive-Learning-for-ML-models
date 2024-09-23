@@ -6,8 +6,7 @@
 1. I dealt with various ML modeling dorectly and indirectly in my current and previous roles. Imbalanced data has always been an issue for ML model training. In a balanced dataset, the number of Positive and Negative labels is about equal. However, if one label is more common than the other label, then the dataset is imbalanced .You might think you got good, historical traning data but removing bias was always an issue.
 2. I knew 1-2 approaches on how to solve this imbalanced dataset issue but I wanted to know optimal approaches and what is true cost/penalty for  selecting  imbalanced dataset.
 3. My current role deals with data pipeline,observability,tennacy, reliability of data infrastructure and AIOPs is becoming more nad more prominent in those areas. ML and AL has its differences but the core algorithms and basic steps of deployment are same. The MLOPS cycle is(Data collection->Clean->Train/test->validate->feature store reuse->deploy into CI CD pipeline->Monitor->Govern->Reuse/Analyze metrics)
-4. This is why I wanted to understand how to take care of this issue and what is the impact/cost/penalty of not solving this.
-5. Moreover I wanted to know the mathametical equation behind solving imbalanced data, the effect on various algorithms,ensembled learning and hyperparameter tuning which I was out of touch for a while
+4. This is why I wanted to understand how to take care of this issue and what is the impact/cost/penalty of not solving this.Moreover I wanted to know the mathametical equation behind solving imbalanced data
 
 # What is this Project About
 1. This project is based on an udemy course of Data Scientist Soledad Galli(https://www.udemy.com/course/machine-learning-with-imbalanced-data/learn/lecture/22733079#overview
@@ -49,9 +48,9 @@ There are multiple approaches to solve this issue. In this project I will focus 
  1. There is 3 ways to get cost of misclassification. Domain Expert provides the cost(Not needed for this course),Balanced weight Ratio (code is in notebook) and Cross-validation: find cost as hyper-parameter (code is in notebook)
 
   
-2. In Python notebook "Cost sensitive learning with Balanced weight class",We explained There are 2 ways in which we can introduce cost into the learning function of the algorithm with Scikit-learn:
+2. In Python notebook "Cost sensitive learning with Balanced weight class",I explained There are 2 ways in which I can introduce cost into the learning function of the algorithm with Scikit-learn:
 
-Defining the class_weight parameter for those estimators that allow it, when we set the estimator
+Defining the class_weight parameter for those estimators that allow it, when I set the estimator
 Passing a sample_weight vector with the weights for every single observation, when we fit the estimator.
 With both the class_weight parameter or the sample_weight vector, we indicate that the loss function should be modified to accommodate the class imbalance and the cost attributed to each misclassification.
 
@@ -64,20 +63,20 @@ sample_weight is a vector of the same length as y, containing the weight or pena
 Estimating the Cost with Cross-Validation.
 
 
-3.In Python notebook "Training Cost with Cross-Validation",We explained  We mentioned that there are 3 ways of estimating the cost:
+3.In Python notebook "Training Cost with Cross-Validation",We explained  I mentioned that there are 3 ways of estimating the cost:
 <br> Domain Expert provides the cost
 <br>  Balance Ratio (we did this in previous notebook)
 <br>  Cross-validation: find cost as hyper-parameter
 <br> In this notebook, we will find the cost with hyper parameter search and cross-validation.Cross validation provides a more robust estimate of a model's performance than a single train-test split, while hyperparameter tuning helps to find the optimal set of hyperparameters for a model. By using these techniques, we can build more accurate and reliable machine learning models
 
-<br> 4. In Python notebook "Credit risk analysis with 3 models",We explained  we'll create 3 models to assess credit risk by using:
+<br> 4. In Python notebook "Credit risk analysis with 3 models",We explained  I created 3 models to assess credit risk by using:
 <br> Logistic regression,Random forests and XGBoost for single use case (Credit Default Risk Analysis) to check whether incorporating cost sensitive training improve Performance metrics such as ROC-AUC Curve ,Preision-Recall curve etc  of those different ML Models
 <br>5.The cost function used in logistic regression is designed to adjust for incorrect predictions. Linear Regression predicts output for  agiven input  but the cost function is used to measure how far the predicted values are from the actual values.
-<br>6.Then we will analyze how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
-<br> And we'll compare their performance after applying cost-sensitive learning.
-<br>7.We'll carry out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
+<br>6.Then I analyzed how cost function is able to improve or failed to improve Performance metrics such as  ROC-AUC Curve ,Preision-Recall curve for each model
+<br> And I compared their performance after applying cost-sensitive learning.
+<br>7.I carried out different feature engineering steps for logistic regression and tree based models.For logistic regression we'll impute with the mean and add missing indicators. For tree based models we'll impute with an arbitrary number.
 <br> For logistic regression we'll do one hot encoding, for tree based models, we'll carry out ordinal encoding.
-<br>8.we'll pass class_weight as parameter into ML models
+<br>8.I passed class_weight as parameter into ML models
 <br>9. Worked on another approach with Meta Label in another notebook
 
 
